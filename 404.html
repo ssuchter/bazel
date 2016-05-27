@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      var current_url = window.location.href;
+      var bad_url = new RegExp("^https?://(.*.github.io/bazel|bazel.io)/");
+      if (bad_url.test(current_url)) {
+        window.location.replace(current_url.replace(bad_url, "http://www.bazel.io/"));
+      }
+    </script>
+  </head>
+</html>
